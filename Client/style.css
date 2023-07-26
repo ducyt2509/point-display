@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Poppins", sans-serif;
+	transition: 0.3s linear;
+}
+
+.d-none {
+	display: none;
+}
+
+input,
+button {
+	outline: none;
+	border-radius: 5px;
+}
+
+.btn-active {
+	background-color: #2cccff;
+	font-weight: bold;
+}
+
+label {
+	font-size: 18px;
+	font-weight: 400;
+	display: block;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+}
+
+main .form {
+	padding: 30px 0 20px 0;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	gap: 50px;
+}
+
+main .form input {
+	max-width: 150px;
+	padding: 5px 10px;
+	border: 1px solid #dddd;
+	margin-left: 15px;
+}
+
+main .form .form-item {
+	width: 400px;
+}
+
+main .form .form-item:last-child {
+	width: auto;
+}
+.error-message {
+	color: red;
+	font-size: 15px;
+	height: 20px;
+	margin-top: 10px;
+}
+main .form button {
+	padding: 10px 25px;
+	border: none;
+}
+
+#board {
+	position: relative;
+	background-color: #cccc;
+	width: 100%;
+	flex: 1;
+}
+.point {
+	width: 16px;
+	height: 16px;
+	border-radius: 100rem;
+	position: absolute;
+}
+
+.point:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	background-color: inherit;
+	animation: blink 1.5s forwards infinite linear;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+@media (max-width: 767px) {
+	main {
+		flex-direction: column-reverse;
+	}
+	main .form {
+		padding: 20px 15px;
+		flex-direction: column;
+		justify-content: center;
+		gap: 25px;
+	}
+	main .form .form-item {
+		width: 100%;
+		text-align: center;
+	}
+	.error-message {
+		margin: 10px;
+		display: none;
+	}
+}
