@@ -8,23 +8,26 @@
 	</head>
 	<body>
 		<main>
-			<form class="form" id="form" onsubmit="return false;">
-				<div class="form-item">
-					<label for="x"
-						>Enter x:
-						<input type="number" min="0" max="100" placeholder="VD: 20" id="x" />
-					</label>
-					<p class="error-message"></p>
-				</div>
-				<div class="form-item">
-					<label for="y"
-						>Enter y:
-						<input type="number" min="0" max="100" placeholder="VD: 20" id="y" />
-					</label>
-					<p class="error-message"></p>
-				</div>
-				<div class="form-item"><button class="btn">Add</button></div>
-			</form>
+			<div>
+				<h2 class="title">Enter the points you want to create</h2>
+				<form class="form" id="form" onsubmit="return false;">
+					<div class="form-item">
+						<label for="x"
+							>Enter x:
+							<input type="number" min="0" max="100" placeholder="VD: 20" id="x" />
+						</label>
+						<p class="error-message"></p>
+					</div>
+					<div class="form-item">
+						<label for="y"
+							>Enter y:
+							<input type="number" min="0" max="100" placeholder="VD: 20" id="y" />
+						</label>
+						<p class="error-message"></p>
+					</div>
+					<div class="form-item"><button class="btn">Add</button></div>
+				</form>
+			</div>
 			<div id="board">
 				<span class="point"></span>
 			</div>
