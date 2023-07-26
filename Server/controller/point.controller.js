@@ -9,7 +9,9 @@ module.exports = {
     async addPoint(req, res) {
         try {
             const { x, y, color } = req.body
-            console.log(x, y, color)
+            if (!x || x < 0 || x > 100) badRequest(res, 'X must be numeric and range from 0 to 100')
+            if (!y || y < 0 || y > 100) badRequest(res, 'Y must be numeric and range from 0 to 100')
+            if (!color) badRequest(res, 'Color must be string and not null')
             await pointServices.addAPoint({
                 x, y, color
             })
@@ -18,6 +20,5 @@ module.exports = {
             badRequest(res, error?.message || error)
         }
     },
-    checkPoint(req, res) {
-    }
+
 }
