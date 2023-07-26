@@ -83,8 +83,8 @@ main .form button {
 	flex: 1;
 }
 .point {
-	width: 16px;
-	height: 16px;
+	width: 13px;
+	height: 13px;
 	border-radius: 100rem;
 	position: absolute;
 }
