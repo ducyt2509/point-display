@@ -14,4 +14,4 @@ To start : **start index.html**
 -   routes : decide to handle the request by directing it to the corresponding request handler
 -   service : contains files containing method calls to the database for business logic
 
-To start server : **yarn start**
+To start server : **npm start**
